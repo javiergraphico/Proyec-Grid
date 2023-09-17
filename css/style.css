@@ -8,17 +8,19 @@
 
 .container-grid {
   padding-top: 2rem;
-
+  padding-bottom: 2rem;
   display: grid;
-  grid:
-    "item1 item1 item1 item2" 270px
-    "item1 item1 item1 item3" 270px
-    "item4 item5 item6 item6" 270px
-    "item7 item7 item8 item9" 270px
-    "item10 item10 item11 item12" 270px
-    "item13 item14 item14 item15" 270px
-    "item16 item17 item18 item18" 270px
-    / 270px 270px 270px 270px;
+  grid-template-areas:
+    "item1 item1 item1 item2" 
+    "item1 item1 item1 item3" 
+    "item4 item5 item6 item6" 
+    "item7 item7 item8 item9" 
+    "item10 item10 item11 item12" 
+    "item13 item14 item14 item15" 
+    "item16 item17 item18 item18";
+  grid-template-columns: repeat(4, minmax(0, 240px));
+  grid-template-rows: repeat(7, minmax(0, 240px));
+  
   gap: 1rem;
   & .item {
     border-radius: 2rem;
@@ -94,5 +96,46 @@
   & .item18 {
     grid-area: item18;
     background-color: rgb(34, 102, 79);
+  }
+}
+@media screen and (max-width: 900px){
+  .container-grid {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-areas:
+      "item1 item1 item1 item2" 
+      "item1 item1 item1 item3" 
+      "item4 item5 item6 item6" 
+      "item7 item7 item8 item9" 
+      "item10 item10 item11 item12"
+      "item13 item14 item14 item15"
+      "item16 item17 item18 item18";
+
+    grid-template-columns: repeat(4, minmax(0, 150px));
+    grid-template-rows: repeat(7, minmax(0, 150px));
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px){
+  .container-grid {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-areas: 
+      "item1 item1 item1" 
+      "item1 item1 item1"
+      "item1 item1 item1" 
+      "item2 item3 item4" 
+      "item5 item6 item6"
+      "item7 item7 item8" 
+      "item9 item10 item10" 
+      "item11 item11 item12" 
+      "item13 item14 item15" 
+      "item16 item17 item18";
+
+    grid-template-columns: repeat(3, minmax(0, 100px));
+    grid-template-rows: repeat(10, minmax(0, 100px));
+    gap: .5rem;
   }
 }
