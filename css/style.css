@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+body{
+  background-color: #fff;
+  /* background-color: #202020; */
+}
 p{
   color: #fff;
 }
@@ -101,9 +105,55 @@ p{
     }
   }
   & .item3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: item3;
-    background-color: rgb(21, 212, 126)
+    background-color: rgb(21, 212, 126);
+    & .container_toogle{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      width: 60px;
+      height: 30px;
+      padding: 0 5px;
+      border-radius: 100px;
+      border: #383838 solid 2px;
+      background-color: #383838;
+      &:last-child::before{
+        content: "";
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: solid 2px #fff;
+        left: 0;
+        right: unset;
+      }
+      &:last-child.active::before{
+        right: 0;
+        left: unset;
+        border: solid 2px #fff;
+      }
+      &:last-child.active i:first-child {
+        color: #fff;
+      }
+      &:last-child.active{
+        background-color: #ffef13;
+        border: #fff solid 2px;
+      }
+      & .sol, .luna{
+        font-size: 1rem;
+        color: #fdc21c;
+      }
+
+      
+    }
+    
   }
+  
   & .item4 {
     grid-area: item4;
     background-color: rgb(247, 122, 21);
@@ -507,6 +557,9 @@ p{
     grid-area: item18;
     background-color: rgb(21, 212, 126)
   }
+}
+body.active{
+  background-color: #202020;
 }
 @media screen and (max-width: 900px){
   .container-grid {
