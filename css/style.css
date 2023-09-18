@@ -37,15 +37,72 @@ p{
   }
   & .item1 {
     grid-area: item1;
-    background-color: rgb(150, 94, 224);
+    background-image: url(../img/AI_Image_gener_3.png);
+    background-repeat: no-repeat;
+    background-position: right -150px top 50px;
+    background-color: rgb(81, 41, 215);
+    position: relative;
+    @media (max-width: 900px){
+      background-position: right -220px top -20px;
+    }
+    @media (max-width: 600px){
+      background-position: right -300px top -20px;
+    }
+
+    & .container_home{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 4rem;
+      @media (max-width: 900px){
+        padding: 2rem;
+      }
+      
+
+      & .h1_home{
+        font-size: 4rem;
+        color: #fff;
+        @media (max-width: 900px){
+          font-size: 2rem;
+        }
+        @media (max-width: 600px){
+          font-size: 1.5rem;
+        }
+      }
+      & .p_home{
+        width: 70%;
+        font-size: 1.3rem;
+        @media (max-width: 900px){
+          width: 80%;
+          font-size: 1rem;
+        }
+        @media (max-width: 600px){
+          font-size: .9rem;
+        }
+      }
+    }
   }
   & .item2 {
     grid-area: item2;
-    background-color: rgb(150, 94, 224);
+    background-color: rgb(81, 41, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .container_logo{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      & .logo{
+        width: 50%;
+
+      }
+    }
   }
   & .item3 {
     grid-area: item3;
-    background-color: rgb(150, 94, 224);
+    background-color: rgb(21, 212, 126)
   }
   & .item4 {
     grid-area: item4;
@@ -197,6 +254,33 @@ p{
   & .item8 {
     grid-area: item8;
     background-color: rgb(247, 122, 21);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+    
+
+    & .container_skill{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+
+      & .icon_skill{
+        font-size: 4.5rem;
+        color: #fff;
+        @media (max-width: 900px){
+          font-size: 2.5rem;
+        }
+        @media (max-width: 600px){
+        font-size: 1.7rem;
+        }
+      }
+    }
   }
   & .item9 {
     grid-area: item9;
@@ -354,6 +438,18 @@ p{
   & .item15 {
     grid-area: item15;
     background-color: rgb(150, 94, 224);
+    overflow: hidden;
+    & .container_foto{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      
+      & .img_foto{
+        width: 120%;
+        
+      }
+    }
   }
   & .item16 {
     grid-area: item16;
@@ -377,6 +473,7 @@ p{
       
       & .n_ingles{
         font-size: 2rem;
+        padding-top: 10px;
         @media (max-width: 900px){
           font-size: 1rem;
         }
@@ -387,6 +484,7 @@ p{
       & .n_level_ingles{
         font-size: 6rem;
         font-weight: 900;
+        
         @media (max-width: 900px){
           font-size: 4rem;
         }
@@ -407,7 +505,7 @@ p{
   }
   & .item18 {
     grid-area: item18;
-    background-color: rgb(34, 102, 79);
+    background-color: rgb(21, 212, 126)
   }
 }
 @media screen and (max-width: 900px){
