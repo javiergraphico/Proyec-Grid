@@ -368,7 +368,7 @@ p{
   }
   & .item11 {
     grid-area: item11;
-    background-color: rgb(127, 255, 212);
+    background-color: rgb(21, 212, 126);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,7 +503,32 @@ p{
   }
   & .item16 {
     grid-area: item16;
-    background-color: rgb(63, 230, 174);
+    background-color: rgb(21, 212, 126);
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.1);
+    }
+    & .container_whatsapp{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      
+      & .whatsapp{
+        font-size: 4.5rem;
+        color: #fff;
+        @media (max-width: 900px){
+          font-size: 2.5rem;
+        }
+        @media (max-width: 600px){
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
   & .item17 {
     grid-area: item17;
