@@ -666,6 +666,27 @@ p{
     }
   }
 }
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .p_footer{
+    color: rgb(22, 0, 91);
+    font-size: 1rem;
+    & .span_footer{
+      font-weight: 700;
+    }
+    @media (max-width: 900px){
+      font-size: .8rem;
+    }
+    @media (max-width: 600px){
+      font-size: .7rem;
+      
+    }
+
+  }
+}
 body.active{
   background-color: #202020;
   background-image: url(../img/noise.gif) ;
