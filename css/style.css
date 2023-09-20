@@ -391,7 +391,7 @@ p{
   }
   & .item10 {
     grid-area: item10;
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(22, 0, 91);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -513,7 +513,46 @@ p{
   }
   & .item14 {
     grid-area: item14;
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(22, 0, 91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 900px){
+      
+    }
+    @media (max-width: 600px){
+      background-color: rgb(81, 41, 215);
+    }
+    & .container_logotipo{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @media (max-width: 600px){
+        display: none;
+      }
+      & .logotipo{
+        width: 350px;
+        @media (max-width: 900px){
+          width: 220px;
+        }
+      }
+    }
+    & .container_logotipo_2{
+      display: none;
+      
+      @media (max-width: 600px){
+        display: block;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+      }
+      & .logotipo02{
+        width: 80px;
+        
+      }
+    }
   }
   & .item15 {
     grid-area: item15;
